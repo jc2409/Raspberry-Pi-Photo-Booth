@@ -1,0 +1,4 @@
+scripts/.env
+out/framed/*.png
+out/*.jpg
+scripts/.venv
