@@ -50,7 +50,7 @@ bool make_frame_opencv(const std::string& inputJpg,
         const int barH = 160;
         const int margin = 40;
         const int gap = 40;
-        const cv::Scalar brandBGR(0x27, 0x16, 0x00); // #001627 in B,G,R
+        const cv::Scalar brandBGR(0x25, 0x02, 0x08);  // BGR for #080225 (37,2,8)
 
         cv::Mat canvas(H, W, CV_8UC3, cv::Scalar(255,255,255));
         cv::rectangle(canvas, {0,0,W,barH}, brandBGR, cv::FILLED);

@@ -30,6 +30,8 @@ void save_pic() {
     fs::create_directories("./out");
     fs::create_directories("./out/framed");
 
+    std::cout << "************ Welcome to the Arm Photo Booth! ************" << std::endl;
+
     char status;
     std::string name = username();
 
@@ -61,8 +63,13 @@ void save_pic() {
         std::cout << (ok ? "Framed photo created: " + framed : "Failed to create framed photo.") << std::endl;
 
         std::string email;
-        std::cout << "Please enter your email address: ";
+        std::cout << "Please enter your email address (Press q to quit): ";
         std::getline(std::cin >> std::ws, email);
+
+        if (email == "q") {
+            std::cout << "Exiting PhotoBooth.\n";
+            return;
+        }
 
         std::string cmd =
             "python3 ./scripts/send_email.py "
