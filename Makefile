@@ -9,7 +9,7 @@ build:
 run:
 	./bin/photobooth
 
-clean_output:
+clear:
 	rm ./out/*.jpg
 	rm ./out/framed/*.png
 
